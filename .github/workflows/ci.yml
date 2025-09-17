@@ -1,0 +1,13 @@
+stages:
+  - unittest
+  - mergerequest
+  - build
+  - push
+
+unit-test-job:
+  stage: unittest
+  image: python:3.11
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "dev"'
+  script:
+    - python3 -m unittest

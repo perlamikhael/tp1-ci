@@ -11,3 +11,4 @@ unit-test-job:
     - if: '$CI_COMMIT_BRANCH == "dev"'
   script:
     - python3 -m unittest
+

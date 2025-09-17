@@ -1,8 +1,5 @@
 stages:
   - unittest
-  - mergerequest
-  - build
-  - push
 
 unit-test-job:
   stage: unittest
@@ -11,4 +8,3 @@ unit-test-job:
     - if: '$CI_COMMIT_BRANCH == "dev"'
   script:
     - python3 -m unittest
-
